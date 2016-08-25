@@ -5,6 +5,7 @@ var config = {}
 
 if (argv.i !== undefined) {
   config.iteration = argv.i < 10 ? '0' + argv.i : argv.i
+  config.iteration += '/'
 } else {
   config.iteration = ''
 }
@@ -15,8 +16,8 @@ if (argv.i !== undefined) {
 
 config.paths = {}
 config.paths.root = path.join(__dirname, '..') + '/'
-config.paths.src = config.paths.root + 'source/' + config.iteration + '/'
-config.paths.dest = config.paths.root + 'website/' + config.iteration + '/'
+config.paths.src = config.paths.root + 'source/' + config.iteration
+config.paths.dest = config.paths.root + 'website/' + config.iteration
 
 /**
  * Webpack

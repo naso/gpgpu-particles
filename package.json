@@ -1,8 +1,8 @@
 {
   "name": "gpgpu-type",
-  "version": "0.0.1",
-  "build": "1437",
-  "build_date": "Thu, Aug 25, 2016 5:03 PM WEST",
+  "version": "0.0.4",
+  "build": "0",
+  "build_date": "Thu, Aug 25, 2016 5:42 PM WEST",
   "description": "gpgpu type",
   "main": "index.js",
   "author": "Fábio Azevedo <me@icantontrolmyego.com> (http://www.icantcontrolmyego.net/)",
