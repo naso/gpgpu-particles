@@ -1,0 +1,56 @@
+.version {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 0.7em;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9998;
+
+  @include respond-to(small) {
+    font-size: 0.5em;
+  }
+
+  .container {
+    display: table;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translate3d(0, 0, 0.01px);
+    transition: transform 0.4s;
+    pointer-events: auto;
+
+    .button {
+      display: table-cell;
+      padding: 10px 14px;
+      background-color: #666;
+      cursor: pointer;
+      transform: translate3d(0, 0, 0.01px);
+      transition: transform 0.4s;
+      &:before {
+        content: '-';
+      }
+    }
+
+    .content {
+      display: table-cell;
+      padding: 10px 14px;
+      transform: translate3d(0, 0, 0.01px);
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &.collapsed {
+    .container {
+      transform: translate3d(100%, 0, 0.01px);
+      .button {
+        transform: translate3d(-100%, 0, 0.01px);
+        &:before {
+          content: '+'
+        }
+      }
+    }
+  }
+}

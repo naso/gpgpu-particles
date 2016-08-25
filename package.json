@@ -1,0 +1,81 @@
+{
+  "name": "gpgpu-type",
+  "version": "0.0.1",
+  "build": "1437",
+  "build_date": "Thu, Aug 25, 2016 5:03 PM WEST",
+  "description": "gpgpu type",
+  "main": "index.js",
+  "author": "Fábio Azevedo <me@icantontrolmyego.com> (http://www.icantcontrolmyego.net/)",
+  "license": "ISC",
+  "scripts": {
+    "start": "gulp dev",
+    "build": "gulp build",
+    "deploy": "gh-pages -d ./website"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naso/zero.git"
+  },
+  "bugs": {
+    "url": "https://github.com/naso/zero/issues"
+  },
+  "homepage": "https://github.com/naso/zero#readme",
+  "devDependencies": {
+    "babel-core": "^6.11.4",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-runtime": "^6.12.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-1": "^6.5.0",
+    "browser-sync": "^2.13.0",
+    "connect-history-api-fallback": "^1.1.0",
+    "del": "^2.2.0",
+    "exports-loader": "^0.6.3",
+    "gh-pages": "^0.11.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-bump": "^2.2.0",
+    "gulp-changed": "^1.3.0",
+    "gulp-cheerio": "^0.6.2",
+    "gulp-compass": "^2.1.0",
+    "gulp-if": "^2.0.1",
+    "gulp-imagemin": "^3.0.2",
+    "gulp-json-editor": "^2.2.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^2.2.0",
+    "gulp-pretty-data": "^0.1.1",
+    "gulp-rev": "^7.0.0",
+    "gulp-rev-replace": "^0.4.3",
+    "gulp-strip-debug": "^1.1.0",
+    "gulp-svg-spritesheet": "0.0.4",
+    "gulp-svgmin": "^1.2.2",
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^4.3.5",
+    "gulp.spritesmith": "^6.2.0",
+    "imports-loader": "^0.6.5",
+    "json-loader": "^0.5.4",
+    "merge-stream": "^1.0.0",
+    "moment-timezone": "^0.5.2",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.2.2",
+    "shader-loader": "^1.2.1",
+    "three": "^0.79.0",
+    "three-orbit-controls": "^72.0.0",
+    "vinyl-buffer": "^1.0.0",
+    "webpack": "2.1.0-beta.20",
+    "webpack-merge": "^0.14.1",
+    "webpack-validator": "^2.2.7"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.11.6",
+    "compare-versions": "^2.0.2",
+    "preload-js": "^0.6.3",
+    "tiny-emitter": "^1.1.0"
+  },
+  "standard": {
+    "ignore": [
+      "source/vendors/libs/*.js",
+      "website/scripts/*.js"
+    ],
+    "parser": "babel-eslint"
+  }
+}

@@ -1,0 +1,9 @@
+$breakpoints:  (
+  small         'screen and ( max-width: 640px )',
+  medium        'screen and ( min-width: 641px ) and ( max-width: 1024px )',
+  large         'screen and ( min-width: 1025px )'
+);
+
+$MOBILE  : (small);
+$TABLET  : (medium);
+$DESKTOP : (large);
