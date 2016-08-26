@@ -565,13 +565,86 @@ body {
   top: 0;
   left: 0;
 }
+#app canvas#letter {
+  z-index: 100;
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: auto;
+  display: none;
+}
+
+.info {
+  z-index: 101;
+  position: absolute;
+  top: 60px;
+  left: 60px;
+}
+@media screen and (max-width: 640px) {
+  .info {
+    top: 20px;
+    left: 20px;
+    width: 70%;
+  }
+}
+.info .button {
+  background-color: #000;
+  color: #aaa;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+}
+.info .button:before {
+  content: '-';
+}
+.info .link {
+  margin-top: 20px;
+  background-color: #ff3333;
+  color: #000;
+  display: inline-block;
+  padding: 10px;
+  font-size: 0.85em;
+}
+.info .link a {
+  text-decoration: none;
+  color: #000;
+}
+.info .description {
+  padding: 20px;
+  background: black;
+}
+.info .description h1 {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  color: #666;
+  line-height: 1.8em;
+}
+.info .description h4 {
+  color: #aaa;
+  font-size: 0.85em;
+  text-transform: uppercase;
+}
+.info .description .instructions {
+  margin-top: 16px;
+}
+.info .description .instructions p {
+  font-size: 0.85em;
+  line-height: 1.8em;
+}
+.info.collapsed .button {
+  background-color: #ff3333;
+  color: #000;
+}
+.info.collapsed .button:before {
+  content: '+';
+}
+.info.collapsed .description {
+  display: none;
+}
 
 #app {
   position: absolute;
   width: 100%;
   height: 100%;
   overflow: hidden;
-}
-#app #letter {
-  z-index: 100;
 }

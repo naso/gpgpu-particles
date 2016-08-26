@@ -1,3 +1,4 @@
+import InfoPanel from './components/info/info'
 import Canvas from './components/canvas'
 import Letter from './components/letter'
 import _ from 'lodash'
@@ -15,6 +16,9 @@ class App {
 
   start () {
     const BUFFER_DIMENSIONS = 512
+
+    this.info = new InfoPanel()
+    this.element.appendChild(this.info.element)
 
     // source canvas holding the letter
     this.letter = new Letter(BUFFER_DIMENSIONS)

@@ -1,0 +1,79 @@
+.info {
+  z-index: 101;
+  position: absolute;
+  top: 60px;
+  left: 60px;
+
+  @include respond-to(small) {
+    top: 20px;
+    left: 20px;
+    width: 70%;
+  }
+
+  .button {
+    background-color: #000;
+    color: #aaa;
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+
+    &:before {
+      content: '-';
+    }
+  }
+
+  .link {
+    margin-top: 20px;
+    background-color: #ff3333;
+    color: #000;
+    display: inline-block;
+    padding: 10px;
+    font-size: 0.85em;
+
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+  }
+
+  .description {
+    padding: 20px;
+    background: black;
+
+    h1 {
+      font-size: 1.2em;
+      text-transform: uppercase;
+      color: #666;
+      line-height: 1.8em;
+    }
+
+    h4 {
+      color: #aaa;
+      font-size: 0.85em;
+      text-transform: uppercase;
+    }
+
+    .instructions {
+      margin-top: 16px;
+
+      p {
+        font-size: 0.85em;
+        line-height: 1.8em;
+      }
+    }
+  }
+
+  &.collapsed {
+    .button {
+      background-color: #ff3333;
+      color: #000;
+
+      &:before {
+        content: '+';
+      }
+    }
+    .description {
+      display: none;
+    }
+  }
+}

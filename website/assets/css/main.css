@@ -112,7 +112,7 @@ a:hover {
  */
 
 .description {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .description h4 {
@@ -128,12 +128,27 @@ a:hover {
   width: 580px;
 }
 
+.button {
+  padding: 10px;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  background: #ff3333;
+  display: inline-block;
+  margin-top: 20px;
+  color: #000;
+  text-decoration: none;
+}
+
+.button:hover {
+  color: #fff;
+}
+
 /**
  * Directory
  */
 
 .directory {
-  margin-top: 60px;
+  margin-top: 20px;
 }
 
 ul {
