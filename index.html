@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+  <title>Yumans &mdash; Playground / GPGPU Particles</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <meta property="og:title" content="Yumans &mdash; Playground / GPGPU Particles">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://naso.github.io/gpgpu-particles/">
+  <meta property="og:image" content="https://naso.github.io/gpgpu-particles/assets/images/ogimage.jpg">
+  <meta property="og:description" content="A gpgpu exploration using three.js and GLSL.">
+
+  <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'>
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="assets/css/reset.css">
+  <link type="text/css" rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+  <div class="header">
+    <div class="header__el">
+      <svg version="1.1" id="yumans-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 182 36" style="enable-background:new 0 0 182 36;" xml:space="preserve">
+        <g>
+          <path class="st0" d="M17.5,35V22.5c-1.6,2.3-3.8,3.1-7.2,3.1C4.9,25.6,1,22.7,1,14.3V1.7h6.9v12.6c0,3.3,1.8,5.1,4.5,5.1
+            c2.9,0,5.2-2,5.2-5.8V1.7h6.9V35H17.5z"/>
+          <path class="st0" d="M36.5,1.7v12.4c0,3.6,1.6,5.5,4.9,5.5c3.2,0,5.3-2.7,5.3-5.8V1.7h6.8v23.5h-6.2l-0.2-3.1
+            c-2.1,2.8-4.8,3.6-7.6,3.6c-5.3,0-9.8-2.4-9.8-11.5V1.7H36.5z"/>
+          <path class="st0" d="M74.5,25.2V12.6c0-3.1-1.2-5.1-4.1-5.1c-2.7,0-4.2,2.5-4.2,5.2v12.6h-6.9V1.7h6l0.5,2.7
+            C67.3,1.8,70,1.1,72,1.1c2.6,0,5.3,1,6.9,4.4c2.1-3.2,4.3-4.4,7.8-4.4c4.9,0,9.4,2.5,9.4,11.2v12.9h-6.9V12.5c0-3-0.8-4.9-3.6-4.9
+            c-2.7,0-4.3,2.3-4.3,5v12.6H74.5z"/>
+          <path class="st0" d="M119.8,1.7h6.4c0,7.8,0,15.7,0,23.5H120l-0.4-3c-1.6,2.5-5,3.4-7.2,3.5c-7.1,0-12.2-4.5-12.2-12.3
+            c0-7.8,5.4-12.4,12.4-12.3c3,0,5.7,1.1,7,3.2L119.8,1.7z M107.1,13.4c0,3.9,2.8,6.2,6.2,6.2c3.9,0,6.2-3,6.2-6
+            c0-3.4-2.1-6.5-6.2-6.5C109.9,7.2,107.1,9.5,107.1,13.4z"/>
+          <path class="st0" d="M149,25.2V12.8c0-3.6-1.6-5.5-4.9-5.5c-3.2,0-5.3,2.7-5.3,5.8v12.1H132V1.7h6.2l0.2,3c2.1-2.7,4.8-3.6,7.6-3.6
+            c5.3,0,9.8,2.5,9.8,11.6v12.5H149z"/>
+          <path class="st0" d="M176.2,8.3c-1.8-1.2-3.4-1.7-5.6-1.7c-2.2,0-3.4,0.8-3.4,2c0,1.3,1.2,2,3.5,2c4.6,0.1,10.2,1.1,10.3,7.6
+            c0,3.8-2.8,7.9-10.3,7.9c-3.5,0-7.1-0.7-11.1-4l3-4.9c2.9,2.4,5.7,2.9,8.2,3c2,0,3.6-0.8,3.5-2c0-1.1-0.8-2-4-2.1
+            c-4.4-0.2-9.9-2-9.9-7.5c0-5.3,5.1-7.6,10.2-7.6c3.6,0,6.5,0.9,9,3L176.2,8.3z"/>
+        </g>
+      </svg>
+    </div>
+    <div class="header__el">
+      <span class="header__el__emdash"></span>
+    </div>
+    <div class="header__el header__el--label">
+      <span class="header__el__highlight">
+        PLAYGROUND
+        <span class="header__el__background"></span>
+      </span>
+    </div>
+  </div>
+
+  <div class="description">
+    <h1>GPGPU Particles</h1>
+    <h4>September 2016</h4>
+    <div class="description__copy">
+      <p>A gpgpu exploration using <a href="" target="_blank">three.js</a> and GLSL.</p>
+      <p>Thanks to <a href="" target="_blank">@nicoptere</a>'s article, that got me started in the subject, and also the utility <a href="" target="_blank">GPUComputationRenderer.js</a> from <a href="" target="_blank">@yomboprime</a> that eases the creation and management of data float textures.</p>
+    </div>
+  </div>
+
+  <div class="directory">
+    <h1>Iterations on <span>gpgpu-particles/</span></h1>
+    <ul>
+      <li>
+        <span class="line-left"></span>
+      </li>
+      <li>
+        <span class="line-left"></span>
+        <span class="line"></span>
+        <a href="01/" target="_self">01/</a>
+      </li>
+      <li>
+        <span class="line-left"></span>
+        <span class="line"></span>
+        <a href="02/" target="_self">02/</a>
+      </li>
+      <li>
+        <span class="line-left"></span>
+        <span class="line"></span>
+        <a href="03/" target="_self">03/</a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
