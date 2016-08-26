@@ -631,6 +631,9 @@ body {
   font-size: 0.85em;
   line-height: 1.8em;
 }
+.info .description .instructions i {
+  color: #666;
+}
 .info.collapsed .button {
   background-color: #ff3333;
   color: #000;
