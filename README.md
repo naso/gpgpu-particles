@@ -9,6 +9,6 @@ Thanks to [@nicoptere](https://twitter.com/nicoptere)'s article, that got me sta
 `$ npm install` - install all the dependencies
 
 ## Development
-`$ npm run start -- --i 1|2|n - development mode
+`$ npm run start -- --i 1|2|n` - development mode
 
 `$ npm run build -- --i 1|2|n` - production build
