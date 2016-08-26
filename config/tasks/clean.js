@@ -4,9 +4,8 @@ var config = require('../config')
 
 gulp.task('clean', function (cb) {
   return del([
-    config.html.dest,
-    config.html.dest + '/**/*',
-    '!' + config.html.dest + '/prototypes',
-    '!' + config.html.dest + '/prototypes/**/*'
+    config.paths.dest,
+    config.root.dest + 'assets',
+    config.root.dest + '*.*'
   ], {force: true}, cb)
 })

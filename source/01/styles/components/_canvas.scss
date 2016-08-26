@@ -2,4 +2,16 @@
   position: absolute;
   top: 0;
   left: 0;
+
+  &#letter {
+    z-index: 100;
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: auto;
+
+    @include respond-to (small) {
+      visibility: hidden;
+    }
+  }
 }

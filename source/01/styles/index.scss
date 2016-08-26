@@ -15,12 +15,4 @@
 
 @import './extra/fonts';
 
-body {
-  font-family: $fontface-text;
-  font-size: 14px;
-  color: #FFF;
-  background-color: #000;
-  transition: background-color 0.5s;
-}
-
 @import './app';

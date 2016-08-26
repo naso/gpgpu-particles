@@ -14,10 +14,15 @@ if (argv.i !== undefined) {
  * Paths
  */
 
+config.root = {}
+config.root.base = path.join(__dirname, '..') + '/'
+config.root.src = config.root.base + 'source/'
+config.root.dest = config.root.base + 'website/'
+
 config.paths = {}
-config.paths.root = path.join(__dirname, '..') + '/'
-config.paths.src = config.paths.root + 'source/' + config.iteration
-config.paths.dest = config.paths.root + 'website/' + config.iteration
+config.paths.root = config.root.base
+config.paths.src = config.root.src + config.iteration
+config.paths.dest = config.root.dest + config.iteration
 
 /**
  * Webpack
@@ -114,6 +119,17 @@ config.html.watch = [
   config.paths.src + 'website/**/*'
 ]
 
+config.directory = {}
+config.directory.src = [
+  config.root.src + 'website/**/*',
+  config.root.src + 'website/**/.*'
+]
+config.directory.dest = config.root.dest
+config.directory.watch = [
+  config.root.src + 'website/**/*',
+  config.root.src + 'website/**/.*'
+]
+
 /**
  * Data
  */
@@ -129,7 +145,7 @@ config.data.watch = config.paths.src + 'assets/data/**/*'
 
 config.browserSync = {}
 config.browserSync.server = {
-  baseDir: config.paths.dest
+  baseDir: config.root.dest
 }
 config.browserSync.port = 3000
 

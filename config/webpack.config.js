@@ -53,6 +53,15 @@ let common = {
       {
         test: /\.(glsl|vs|fs)$/,
         loader: 'shader'
+      },
+
+      {
+        test: /\.html/,
+        loader: 'ejs-loader',
+        query: {
+          interpolate: '\\{\\{(.+?)\\}\\}',
+          evaluate: '\\[\\[(.+?)\\]\\]'
+        }
       }
     ]
   }

@@ -1,5 +1,6 @@
-import Canvas from './components/partycles/canvas'
-import Letter from './components/partycles/utils/letter'
+import InfoPanel from './components/info/info'
+import Canvas from './components/particles/canvas'
+import Letter from './components/particles/utils/letter'
 import _ from 'lodash'
 
 class App {
@@ -14,6 +15,9 @@ class App {
   }
 
   start () {
+    this.info = new InfoPanel()
+    this.element.appendChild(this.info.element)
+
     this.letter = new Letter()
     this.element.appendChild(this.letter.element)
 

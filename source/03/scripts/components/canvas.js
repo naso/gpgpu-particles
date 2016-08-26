@@ -84,12 +84,12 @@ class Canvas {
       this.positionVariable.wrapT = THREE.RepeatWrapping
     } else {
       for (let i = 0; i < (this.bufferWidth * this.bufferHeight) * 3; i++) {
-        this.particles.geometry.attributes.oldPos.array[i] = 0
+        this.particles.geometry.attributes.oldPos.array[i] = 10
       }
 
       this.particles.material.uniforms.time.value = 0
-
       this.particles.geometry.attributes.oldPos.needsUpdate = true
+
       const currentRenderTarget = this.gpuCompute.getCurrentRenderTarget(this.positionVariable)
       this.positionVariable.material.uniforms.positions.value = positions
       this.gpuCompute.doRenderTarget(this.positionVariable.material, currentRenderTarget)

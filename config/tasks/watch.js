@@ -8,6 +8,10 @@ gulp.task('watch', function () {
     gulp.start('html')
   })
 
+  watch(config.directory.watch, function () {
+    gulp.start('directory')
+  })
+
   watch(config.sass.watch, function () {
     gulp.start('sass')
   })
